@@ -1,11 +1,11 @@
 $(function() {
 
    $.ajax({
-		: 'https://www.codeschool.com/users/2603825.json',
+		url: 'https://www.codeschool.com/users/2603825.json',
 		dataType: 'jsonp',
 		success: function (response) {
 			//handle response
-			addCourses('response', response.courses.completed);
+			addCourses(response.courses.completed);
 		}
 	});
 	function addCourses(courses) {
